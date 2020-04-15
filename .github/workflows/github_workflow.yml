@@ -1,0 +1,16 @@
+name: Service On-Push Action
+on: push
+
+jobs:
+  build:
+    name: Hello Yusuf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch to Master
+        uses: actions/checkout@master
+      - name: Run Tests and Linters
+        with: 
+          GOPATH: /home/runner/work/logistic-laas/go
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_USERNAME: ${{ secrets.USER_NAME }}
+        uses: ./.github/action/
