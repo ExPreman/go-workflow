@@ -1,0 +1,17 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  GOPATH:
+    description: 'Golang Binary Path'
+  GITHUB_TOKEN:
+    description: 'Github token get from github secret'
+  GITHUB_USERNAME:
+    description: 'Github username get from github secret'
+runs:
+  using: 'docker'
+  image: '../docker/Dockerfile'
+  args:
+    - ${{ inputs.GOPATH }}
+    - ${{ inputs.GITHUB_TOKEN }}
+    - ${{ inputs.GITHUB_USERNAME }}
