@@ -15,7 +15,7 @@ git config --global url."https://$3:$2@github.com".insteadOf "https://github.com
 dep ensure -v --vendor-only
 
 echo "Trying to build the service"
-go build ./cmd/booking/app-http/
+go build ./
 
 echo "Trying to run unit and integration test"
 GITHUB_ACTION=yes go test -race -cover ./...
