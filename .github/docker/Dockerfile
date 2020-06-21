@@ -5,8 +5,8 @@ LABEL "com.github.actions.description"="run go test and build command"
 LABEL "com.github.actions.icon"="terminal"
 LABEL "com.github.actions.color"="blue"
 
-LABEL "repository"="http://github.com/ExPreman/go-workflow"
-LABEL "homepage"="http://github.com/ExPreman"
+LABEL "repository"="http://github.com/ex-preman/go-workflow"
+LABEL "homepage"="http://github.com/ex-preman"
 
 COPY entry_point.sh /entry_point.sh
 
