@@ -18,4 +18,4 @@ echo "Trying to build the service"
 go build ./
 
 echo "Trying to run unit and integration test"
-GITHUB_ACTION=yes go test -race -cover ./...
+GITHUB_ACTION=yes make run-tests

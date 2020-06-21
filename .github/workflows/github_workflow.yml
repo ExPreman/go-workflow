@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@master
       - name: Run Tests and Linters
         with: 
-          GOPATH: /home/runner/work/logistic-laas/go
+          GOPATH: /home/runner/work/go-workflow/go
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           GITHUB_USERNAME: ${{ secrets.USER_NAME }}
         uses: ./.github/action/
